@@ -1,3 +1,4 @@
 # smapage.github.io
-Landing Page Practice
+Web branding agency - fiction project to practice
+Landing Page Practice 
 https://mrdk901.github.io/smapage/
