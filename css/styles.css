@@ -164,6 +164,7 @@ button.learn {
 
 button:hover {
     text-decoration: none;
+    background-color: #8B0000;
 }
 
 button.video {
@@ -296,8 +297,8 @@ p {
     text-align: center;
 }
 
-a:hover {
-    background-color: darkred;
+.section-contact a:hover {
+    background-color: #8B0000;
     box-shadow: 2px;
     cursor: pointer;
 }
