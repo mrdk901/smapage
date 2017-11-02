@@ -203,7 +203,7 @@ button.video {
 .row {
     text-align: center;
     margin: 10px;
-    border: 1px solid #000000;
+    border: 1px solid #A0A09E;
     border-radius: 20px;
 }
 
@@ -222,6 +222,17 @@ p {
     color: #B5B2C3;
 }
 
+.controls {
+    display: none;
+}
+
+.section-clients p {
+    padding: 0px 0px 30px 0px;
+}
+
+#control1, #control2, #control3 {
+    display: none;
+}
 
 /* clients start */
 
@@ -244,7 +255,7 @@ p {
 .section-clients p a {
     transition: all .3s;
     text-decoration: underline;
-    color: rgba(255, 255, 255, 0.3);
+    color: #A0A09E;
 }
 
 .shell ul {
@@ -415,7 +426,6 @@ p {
         text-align: center;
     }
     .section-clients ul li {
-        margin: 10px;
         width: 30%;
     }
     .btn-contact {
@@ -435,4 +445,107 @@ p {
         width: 30px;
         height: 30px;
     }
+    .slider {
+    display: block;
+    height: 320px;
+    min-width: 260px;
+    max-width: 640px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.sliderinner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+ 
+.sliderinner>ul {
+    list-style: none;
+    height: 100%;
+    width: 500%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+ 
+.sliderinner>ul>li {
+    width: 20%;
+    height: 320px;
+    float: left;
+    position: relative;
+}
+ 
+.sliderinner>ul>li>img {
+    margin: auto;
+    height: 100%;
+}
+ 
+.slider input[type=radio] {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 100;
+    visibility: hidden;
+}
+ 
+.slider label {
+    position: absolute;
+    left: 50%;
+    bottom: 350px;
+    z-index: 100;
+    width: 12px;
+    height: 12px;
+    
+    background-color: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+        -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+}
+ 
+.slider input[type=radio]#control1:checked~label[for=control1] { background-color: #A0A09E; }
+.slider input[type=radio]#control2:checked~label[for=control2] { background-color: #A0A09E; }
+.slider input[type=radio]#control3:checked~label[for=control3] { background-color: #A0A09E; }
+
+.slider label[for=control1] { margin-left: -60px }
+.slider label[for=control2] { margin-left: 0px }
+.slider label[for=control3] { margin-left: 60px } 
+
+.slider input[type=radio]#control1:checked~.sliderinner>ul { left: -100% }
+.slider input[type=radio]#control2:checked~.sliderinner>ul { left: -200% }
+.slider input[type=radio]#control3:checked~.sliderinner>ul { left: -300% }
+
+ 
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.description-text {
+    background-color: rgba(0,0,0,.8);
+    padding: 10px;
+    top: 0;
+    z-index: 4;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    color: #fff;
+}
 }
